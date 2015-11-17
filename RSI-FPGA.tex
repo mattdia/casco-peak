@@ -1,0 +1,64 @@
+\documentclass[letterpaper,12pt,amsmath,reprint,aip,jmp,onecolumn]{revtex4-1}
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{setspace}
+\linespread{1}
+
+
+%\author{M. W. Day$^1$, B. Sun$^1$, D. Almedia$^1$, S. T. Cundiff$^{1,2}$}
+%\vspace{.5cm}
+%\address{$^1$ JILA, University of Colorado \& National Institute of Standards and Technology, Boulder CO 80309, USA}
+%\address{$^2$ Department of Physics, University of Michigan, Ann Arbor, MI 48109, USA}
+%\date{\today}
+%\vspace{0cm}
+\begin{document}
+\title{Path Length Stabilization Using a Field Programmable Gate Array}
+\author{M.W. Day}
+ \altaffiliation[Also at ]{JILA, University of Colorado \& National Institute of Standards and Technology, Boulder CO 80309, USA}
+\author{B.~Sun}%
+ \email{bo.sun@jila.colorado.edu.}
+\affiliation{JILA, University of Colorado \& National Institute of Standards and Technology, Boulder CO 80309, USA}%
+
+\author{D. Almedia}
+\affiliation{JILA, University of Colorado \& National Institute of Standards and Technology, Boulder CO 80309, USA}
+
+
+\author{S.~T. Cundiff}
+\affiliation{Department of Physics, University of Michigan, Ann Arbor, MI 48109, USA}
+
+\begin{abstract}
+Draft Abstract: Ultrafast Coherent Multidimensional Spectroscopy is a versatile spectroscopic tool used to gain insight into complicated coherent electronic processes associated with a variety of physically fundamental phenomena. Performing these experiments requires laser path stabilization of $\lambda / 100$ or better. Using PI control algorithms to stabilize nested Michelson interferometers, path length stabilization of this quality can be achieved. Previously, analogue PI filters were used for this purpose, we report the development of a new instrument using a Field Programmable Gate Array to digitize and improve upon the performance of the analog filters.
+\end{abstract}
+\maketitle
+
+\section{Introduction}
+\Large{\textbf{Outline}}\\
+\begin{enumerate}
+\item Introduction
+\begin{itemize}
+\item 2D background.
+\item Review of MONSTR configuration.
+\item Review of current PI filter configuration
+\end{itemize}
+\item FPGA filter device
+\begin{itemize}
+\item Analog amplifier circuits (purpose, config., and performance)
+\item FPGA PI stabilization algorithm
+\item FPGA liquid crystal/ shutter motor control algorithms
+\end{itemize}
+
+\item Results
+\begin{itemize}
+\item Analog v. FPGA performance (abs. noise reduction, FFT noise analysis
+\end{itemize}
+\item Conclusion
+\begin{itemize}
+\item FPGA algorithm a suitable replacement for analog filters, substantially easier to implement.
+\end{itemize}
+\end{enumerate}
+\end{document}
