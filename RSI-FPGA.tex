@@ -1,0 +1,72 @@
+\documentclass[letterpaper,12pt,amsmath,reprint,aip,jmp,twocolumn]{revtex4-1}
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{setspace}
+\linespread{1}
+
+
+%\author{M. W. Day$^1$, B. Sun$^1$, D. Almedia$^1$, S. T. Cundiff$^{1,2}$}
+%\vspace{.5cm}
+%\address{$^1$ JILA, University of Colorado \& National Institute of Standards and Technology, Boulder CO 80309, USA}
+%\address{$^2$ Department of Physics, University of Michigan, Ann Arbor, MI 48109, USA}
+%\date{\today}
+%\vspace{0cm}
+\begin{document}
+\title{Path Length Stabilization Using a Field Programmable Gate Array}
+\author{M.W. Day}
+ \altaffiliation[Also at ]{JILA, University of Colorado \& National Institute of Standards and Technology, Boulder CO 80309, USA}
+\author{B.~Sun}%
+ \email{bo.sun@jila.colorado.edu.}
+\affiliation{JILA, University of Colorado \& National Institute of Standards and Technology, Boulder CO 80309, USA}%
+
+\author{D. Almedia}
+\affiliation{JILA, University of Colorado \& National Institute of Standards and Technology, Boulder CO 80309, USA}
+
+
+\author{S.~T. Cundiff}
+\affiliation{Department of Physics, University of Michigan, Ann Arbor, MI 48109, USA}
+
+\begin{abstract}
+Draft Abstract: Ultrafast Coherent Multidimensional Spectroscopy is a versatile spectroscopic tool used to gain insight into complicated coherent electronic processes associated with a variety of physically fundamental phenomena. Performing these experiments requires laser path stabilization of $\lambda / 100$ or better. Using PI control algorithms to stabilize nested Michelson interferometers, path length stabilization of this quality can be achieved. Previously, analogue PI filters were used for this purpose, we report the development of a new instrument using a Field Programmable Gate Array to digitize and improve upon the performance of the analog filters.
+\end{abstract}
+\maketitle
+
+\section{Introduction}
+\indent Ultrafast Multidimensional Coherent Spectroscopy (MDCS) provides unique and powerful insight into the structure, dynamics, and coupling of electron states in matter (CITE Gael, Steve, others). The primary advantage of MDCS over similar photon-echo and four-wave mixing spectroscopy lies in the ability to decongest complicated and entangle spectra over multiple frequency axes (CITE other review).  A diverse array of physical systems have been studies with MDCS: (SOME shit.) 
+
+\indent MDCS measurements require phase stability between pulses incident on a system of interest CITE review. Various schemes to achieve phase-stabilization have been employed. Generally these schemes can be subdivided into active- and passive-stabilization techniques. Among the favored passive-stabilization procedures are (PHASE SHIZ, OGALVIE). Active-stabilization, on the other hand, enables greater experimental flexibility in that longer time-delays between pulses can be achieved. A successful experiment employing active phase stabilization is the JILA multidimensional optical nonlinear spectrometer (MONSTR). The experiment employs four piezo-stabilized nested Michelson interferometers, seen in Figure (FPGA). A full description of the experiment and its operation is available in CITE Bristow.
+  
+\indent The MONSTR splits a single beam from a pulsed light-source into four phase-stabilized beams in a box configuration CITE Bristow. The time delay between each of the four beams can be arbitrarily set to create four time-ordered, phase-stabilized pulses. In order to maintain phase stability between each pulse, it is imperative to have stabilize the path-length of each beam to better than $\lambda/100$. To do this, a diagnostic HeNe laser is co-propagated with the pulsed Ti:sapphire laser. The beam is split first into four beams with three beamsplitters. Each beam is then directed to a delay stage. The four beams exit the MONSTR through a coated dichroic mirror which reflects the HeNe laser back into the device. The dichroic mirror forms one arm of each interferometer, and each delay stage has a mirror mounted to a piezoelectric crystal to compensate for path-length differences. The diagnostic signal is read by three photodiodes. The interferogram is thereby transformed into an electrical error signal. Analog electronic PID filters read the electronic error signal and output a corrective response to a piezo driver which, in turn, moves the compensation mirrors in each interferometer.
+
+\section{Digital Filter Device and Implementation}
+\indent Field Programmable Gate Array chips have proven useful for experimental control in a variety of settings (CITE quits-ultrafast). We've been able to use an FPGA chip to replace our analog PID filters in the MONSTR stabilization scheme. To illustrate the usefulness and effectiveness of doing so, we'll first outline the current operation of the analog filters,  describe the configuration of the FPGA interface electronics, and discuss the implementation of LabView code on the FPGA chip for digital experimental control.
+\Large{\textbf{Outline}}\\
+\begin{enumerate}
+\item Introduction
+\begin{itemize}
+\item 2D background.
+\item Review of MONSTR configuration.
+\item Review of current PI filter configuration
+\end{itemize}
+\item FPGA filter device
+\begin{itemize}
+\item Analog amplifier circuits (purpose, config., and performance)
+\item FPGA PI stabilization algorithm
+\item FPGA liquid crystal/ shutter motor control algorithms
+\end{itemize}
+
+\item Results
+\begin{itemize}
+\item Analog v. FPGA performance (abs. noise reduction, FFT noise analysis
+\end{itemize}
+\item Conclusion
+\begin{itemize}
+\item FPGA algorithm a suitable replacement for analog filters, substantially easier to implement.
+\end{itemize}
+\end{enumerate}
+\end{document}
